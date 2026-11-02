@@ -34,7 +34,7 @@
 
         <!-- FOTO -->
         <img
-            src="{{ asset('images/irfan.jpeg') }}"
+            src="{{ asset('images/adam.jpeg') }}"
             alt="Foto Mahasiswa"
             style="
                 width: 160px;

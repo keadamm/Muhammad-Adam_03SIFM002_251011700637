@@ -10,10 +10,10 @@
     <h1>Halaman About</h1>
     <p>Selamat datang di halaman about</p>
 
-    <img src="{{ asset('images/irfan.jpeg') }}" alt="Foto Profil" style="width: 200px;">
+    <img src="{{ asset('images/adam.jpeg') }}" alt="Foto Profil" style="width: 200px;">
 
-    <p>Nama : Yohanes vianey suardy</p>
-    <p>NIM : 251011700547</p>
+    <p>Nama : Muhammad Adam</p>
+    <p>NIM : 251011700637</p>
     <p>Prodi : Sistem Informasi - UNPAM</p>
 </body>
 </html>

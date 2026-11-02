@@ -9,7 +9,6 @@ class AdminController extends Controller
 {
     private const KATEGORI = ['Hardware', 'Software', 'Periferal'];
 
-    // Tampil semua data
     public function index()
     {
         $perangkat = Perangkat::orderBy('id')->get();
@@ -17,7 +16,6 @@ class AdminController extends Controller
         return view('admin.admin', compact('perangkat'));
     }
 
-    // Form tambah data
     public function create()
     {
         return view('admin.form', [
@@ -26,7 +24,6 @@ class AdminController extends Controller
         ]);
     }
 
-    // Simpan data baru
     public function store(Request $request)
     {
         Perangkat::create($this->validasi($request));
@@ -34,7 +31,6 @@ class AdminController extends Controller
         return redirect()->route('admin.index')->with('sukses', 'Data berhasil ditambahkan.');
     }
 
-    // Form edit data
     public function edit(Perangkat $perangkat)
     {
         return view('admin.form', [
@@ -43,7 +39,6 @@ class AdminController extends Controller
         ]);
     }
 
-    // Simpan perubahan data
     public function update(Request $request, Perangkat $perangkat)
     {
         $perangkat->update($this->validasi($request));
@@ -51,7 +46,6 @@ class AdminController extends Controller
         return redirect()->route('admin.index')->with('sukses', 'Data berhasil diubah.');
     }
 
-    // Hapus data
     public function destroy(Perangkat $perangkat)
     {
         $nama = $perangkat->nama;

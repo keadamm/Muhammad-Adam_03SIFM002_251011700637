@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', function () {
-    return view('page.profile');
+    return redirect('/mahasiswa');
 });
 
 Route::get('/project', function () {
